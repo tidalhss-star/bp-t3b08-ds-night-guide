@@ -1,214 +1,728 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>영화 미학 지식 저널 및 아카이브</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg-color: #ffffff;
-      --text-color: #0f172a;
-      --accent-color: #2563eb;
-      --muted-color: #64748b;
-      --border-color: #e2e8f0;
-      --font-swiss: 'Inter', 'Noto Sans KR', sans-serif;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>당산 유흥 가이드 | 당산 놀거리 & 술집 추천</title>
+    <meta name="description" content="당산역 주변 유흥 정보를 친근하게 소개합니다. 혼술, 회식, 데이트까지 아우르는 당산 유흥 가이드. 전화 문의 010-6279-0862">
+    <meta name="keywords" content="당산, 유흥, 당산 유흥 가이드, 당산 술집, 당산 놀거리, 당산 회식, 당산 혼술, 당산역 맛집">
+    <meta name="bpaas-design-system" content="editorial-apple">
+    <meta name="bpaas-design-theme" content="kr-warm-grid">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://t3b08-ds-night-guide.vercel.app/">
+
+    <!-- OG 메타 -->
+    <meta property="og:title" content="당산 유흥 가이드 | 현지인이 추천하는 밤의 핫플">
+    <meta property="og:description" content="당산역에서 놀기 좋은 곳, 진짜 리뷰와 함께 소개합니다. 혼자? 여럿? 다 괜찮아!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://t3b08-ds-night-guide.vercel.app/">
+    <meta property="og:site_name" content="당산 유흥 가이드">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="당산 유흥 가이드 | 현지인이 추천하는 밤의 핫플">
+    <meta name="twitter:description" content="당산역에서 놀기 좋은 곳, 진짜 리뷰와 함께 소개합니다. 혼자? 여럿? 다 괜찮아!">
+
+    <!-- JSON-LD 스키마 -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "당산 유흥 가이드",
+        "description": "당산역 주변 유흥 및 술집 정보를 제공하는 커뮤니티 가이드",
+        "url": "https://t3b08-ds-night-guide.vercel.app/",
+        "telephone": "010-6279-0862",
+        "areaServed": {
+            "@type": "City",
+            "name": "서울",
+            "sameAs": "https://en.wikipedia.org/wiki/Seoul"
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "당산",
+            "addressRegion": "서울특별시",
+            "addressCountry": "KR"
+        }
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      font-family: var(--font-swiss);
-      line-height: 1.8;
-      letter-spacing: -0.01em;
-      padding: 0 24px;
-    }
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 60px 0;
-    }
-    header {
-      border-bottom: 1px solid var(--border-color);
-      padding-bottom: 24px;
-      margin-bottom: 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-    }
-    .logo {
-      font-size: 1.25rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      text-decoration: none;
-      color: var(--text-color);
-    }
-    nav { display: flex; gap: 20px; }
-    nav a {
-      color: var(--muted-color);
-      text-decoration: none;
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      font-weight: 600;
-      transition: color 0.2s ease;
-    }
-    nav a:hover { color: var(--accent-color); }
-    main { padding-bottom: 60px; }
-    .meta-tag {
-      font-size: 0.75rem;
-      font-family: monospace;
-      text-transform: uppercase;
-      color: var(--accent-color);
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      margin-bottom: 16px;
-      display: inline-block;
-    }
-    h1 {
-      font-size: 2.3rem;
-      font-weight: 700;
-      line-height: 1.3;
-      letter-spacing: -0.02em;
-      color: var(--text-color);
-      margin-bottom: 32px;
-    }
-    .content {
-      font-size: 1.05rem;
-      color: var(--text-color);
-      margin-bottom: 48px;
-      font-weight: 400;
-    }
-    .content p { margin-bottom: 20px; }
-    .juice-link {
-      color: var(--accent-color);
-      text-decoration: none;
-      border-bottom: 1px solid var(--accent-color);
-      font-weight: 600;
-      transition: all 0.2s ease;
-    }
-    .juice-link:hover {
-      background-color: rgba(37, 99, 235, 0.05);
-    }
-    .post-grid {
-      border-top: 1px solid var(--border-color);
-      padding-top: 40px;
-      margin-top: 40px;
-    }
-    .grid-title {
-      font-size: 0.85rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--muted-color);
-      margin-bottom: 24px;
-    }
-    .posts-list {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-    .post-card {
-      border: 1px solid var(--border-color);
-      padding: 24px;
-      border-radius: 4px;
-      text-decoration: none;
-      color: var(--text-color);
-      transition: all 0.2s ease;
-    }
-    .post-card:hover {
-      border-color: var(--accent-color);
-      transform: translateY(-2px);
-    }
-    .post-card h3 {
-      font-size: 1.15rem;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-    .post-card p {
-      font-size: 0.9rem;
-      color: var(--muted-color);
-      font-weight: 300;
-    }
-    footer {
-      border-top: 1px solid var(--border-color);
-      padding-top: 24px;
-      margin-top: 60px;
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.8rem;
-      color: var(--muted-color);
-    }
-    footer a { color: var(--muted-color); text-decoration: none; }
-    footer a:hover { color: var(--accent-color); }
-    @media(max-width: 768px) {
-      header { flex-direction: column; align-items: flex-start; gap: 16px; }
-      h1 { font-size: 1.8rem; }
-    }
-  </style>
+    </script>
+
+    <style>
+        /* RESET & BASE */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Inter', 'Segoe UI', Roboto, sans-serif;
+            background-color: #faf8f5;
+            color: #2d2a26;
+            line-height: 1.6;
+            padding: 0 16px;
+        }
+
+        /* CONTAINER */
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* TYPOGRAPHY */
+        h1, h2, h3, h4 {
+            font-weight: 600;
+            letter-spacing: -0.02em;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 24px;
+            border-bottom: 1px solid #2d2a26;
+            padding-bottom: 8px;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+        }
+
+        p {
+            margin-bottom: 16px;
+        }
+
+        a {
+            color: #2d2a26;
+            text-decoration: none;
+            border-bottom: 1px solid #e07a5f;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        a:hover {
+            border-bottom: 2px solid #e07a5f;
+            color: #e07a5f;
+        }
+
+        /* HEADER / NAV */
+        header {
+            border-bottom: 1px solid #2d2a26;
+            padding: 16px 0;
+            margin-bottom: 40px;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            border: none;
+            color: #2d2a26;
+        }
+
+        .logo:hover {
+            border: none;
+            color: #e07a5f;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            border-bottom: none;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            border-bottom: 2px solid #e07a5f;
+        }
+
+        .nav-cta {
+            background: #2d2a26;
+            color: #faf8f5;
+            padding: 8px 16px;
+            border-radius: 0;
+            border: 1px solid #2d2a26;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .nav-cta:hover {
+            background: #e07a5f;
+            color: #faf8f5;
+            border-color: #e07a5f;
+        }
+
+        /* 햄버거 버튼 */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 4px;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 26px;
+            height: 2px;
+            background: #2d2a26;
+            transition: 0.3s;
+        }
+
+        /* 반응형 네비게이션 */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                gap: 12px;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background: #faf8f5;
+                border-bottom: 1px solid #2d2a26;
+                padding: 24px;
+                z-index: 100;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links li {
+                width: 100%;
+                text-align: center;
+            }
+
+            .nav-cta {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        /* HERO */
+        .hero {
+            padding: 40px 0;
+            border-bottom: 1px solid #2d2a26;
+            margin-bottom: 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .hero-visual {
+            background: #2d2a26;
+            aspect-ratio: 4 / 3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            border: 1px solid #2d2a26;
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        .hero-phone {
+            display: inline-block;
+            margin-top: 16px;
+            background: #e07a5f;
+            color: #faf8f5;
+            padding: 12px 24px;
+            border: 1px solid #2d2a26;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        .hero-phone:hover {
+            background: #2d2a26;
+            color: #faf8f5;
+            border-color: #2d2a26;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+            .hero-visual {
+                aspect-ratio: 3/2;
+            }
+        }
+
+        /* SECTION */
+        section {
+            margin-bottom: 40px;
+            padding-top: 8px;
+        }
+
+        .section-divider {
+            border: none;
+            border-top: 1px solid #2d2a26;
+            margin: 40px 0;
+        }
+
+        /* CARD GRID */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid #2d2a26;
+            padding: 24px;
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+
+        .card:hover {
+            box-shadow: 2px 2px 0px rgba(0,0,0,0.08);
+            transform: translateY(-2px);
+        }
+
+        .card h3 {
+            font-size: 1.2rem;
+            border-bottom: 1px solid #e07a5f;
+            padding-bottom: 4px;
+            margin-bottom: 12px;
+        }
+
+        .card .stars {
+            color: #e07a5f;
+            letter-spacing: 2px;
+            font-size: 1.1rem;
+        }
+
+        .card .meta {
+            font-size: 0.85rem;
+            color: #777;
+            margin: 8px 0 12px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        @media (max-width: 768px) {
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* 2 COLUMN */
+        .grid-2col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        @media (max-width: 768px) {
+            .grid-2col {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* FOOTER */
+        footer {
+            border-top: 1px solid #2d2a26;
+            padding: 24px 0;
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        footer a {
+            border-bottom: 1px solid #e07a5f;
+        }
+
+        /* UTILITIES */
+        .text-accent {
+            color: #e07a5f;
+        }
+
+        .mt-16 {
+            margin-top: 16px;
+        }
+
+        .mb-8 {
+            margin-bottom: 8px;
+        }
+
+        .inline-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 16px;
+        }
+
+        .inline-list li::before {
+            content: "• ";
+            color: #e07a5f;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #2d2a26;
+            color: #faf8f5;
+            padding: 10px 20px;
+            border: 1px solid #2d2a26;
+            font-weight: 600;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .btn:hover {
+            background: #e07a5f;
+            border-color: #e07a5f;
+            color: #faf8f5;
+        }
+    </style>
+<meta property="og:image" content="og-image.svg">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
 <body>
-  <div class="container">
-    <header>
-      <a href="/" class="logo">KR.GEEK</a>
-      <nav><a href="index.html">HOME</a> | <a href="sitemap.xml">SITEMAP</a></nav>
-    </header>
-    <main>
-      <div class="meta-tag">// SWISS ACCENTED GRID SYSTEM</div>
-      <h1>영화 미학 지식 저널 및 아카이브</h1>
-      <div class="content">
-        환영합니다. 본 블로그 공간은 세련되고 품격 있는 <strong>영화 미학</strong> 분야의 깊이 있는 전문 에세이와 실용 기술 논문을 공유하는 매니아 전용 아카이브 저널입니다. 아래의 최근 기사 목록을 통해 새로운 지식의 지평을 넓혀 보시기 바랍니다.
-      </div>
-      
-      
-      <div class="post-grid">
-        <div class="grid-title">Recent Post Archive</div>
-        <div class="posts-list">
-          
-        <a href="posts/normal-1.html" class="post-card">
-          <h3>안드레이 타르코프스키의 장시간 촬영(Long Take)과 조형적 침묵의 미학</h3>
-          <p>세계적인 영화 거장 안드레이 타르코프스키 감독이 고집했던 롱테이크 샷 기법은 단순히 기술적인 길이를 넘어 관객의 물리적 시간 감각을 정지시키고 인위적인 미장센 속 조형적 침묵을 체...</p>
-        </a>
-      
 
-        <a href="posts/normal-2.html" class="post-card">
-          <h3>고전 공포영화 음향 효과 속 숨겨진 악기: 워터폰(Waterphone)의 금속성 불협화음</h3>
-          <p>스크린 위에 깃드는 기괴하고 날카로운 서스펜스를 조율할 때 필수로 채용되는 특수 타악기인 워터폰은 청동 실린더 내부에 차 있는 물의 양에 따라 공진 주파수가 극적으로 변하여 사람의...</p>
-        </a>
-      
+<header>
+    <div class="container nav-container">
+        <a href="/" class="logo">🌙 당산가이드</a>
+        <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#intro">소개</a></li>
+            <li><a href="#reviews">리뷰</a></li>
+            <li><a href="#spots">추천스팟</a></li>
+            <li><a href="#contact" class="nav-cta">📞 문의</a></li>
+        </ul>
+    </div>
+</header>
 
-        <a href="posts/normal-3.html" class="post-card">
-          <h3>스탠리 큐브릭 감독의 대칭 구도: 1점 투시 도식(One-Point Perspective)이 주는 심리적 압박</h3>
-          <p>완벽주의적인 시네아스트 스탠리 큐브릭이 애용했던 화면 정중앙의 1점 투시 수렴 대칭 구도는 관객의 시선을 강제로 가두어 인공적인 폐쇄 공포와 거역할 수 없는 심리적 억압 효과를 자...</p>
-        </a>
-      
+<main class="container">
 
-        <a href="posts/juice-1.html" class="post-card">
-          <h3>시네필과 영화 예술 매니아들이 엄선 정리한 구글 상위노출 대행 상세 정보 리포트</h3>
-          <p>빛과 어둠의 정교한 시각 프레임과 기하학적 미장센의 깊은 울림을 공부하며 시각 예술의 안목을 키워가는 현대의 시네필분들이라면, 극장 밖 현실 세계에서 느끼는 여가의 만족도와 품격 ...</p>
-        </a>
-      
+    <!-- HERO -->
+    <section class="hero">
 
-        <a href="posts/juice-2.html" class="post-card">
-          <h3>시네필과 영화 예술 매니아들이 엄선 정리한 구글 상위노출 대행 상세 정보 리포트</h3>
-          <p>빛과 어둠의 정교한 시각 프레임과 기하학적 미장센의 깊은 울림을 공부하며 시각 예술의 안목을 키워가는 현대의 시네필분들이라면, 극장 밖 현실 세계에서 느끼는 여가의 만족도와 품격 ...</p>
-        </a>
-      
-        </div>
-      </div>
-    </main>
-    <footer>
-      <div>&copy; 2026 KR.GEEK. ALL RIGHTS RESERVED.</div>
-      <div>
-        <a href="sitemap.xml">SITEMAP</a> | 
-        <a href="#">PRIVACY</a> | 
-        <a href="#">DISCLAIMER</a>
-      </div>
-    </footer>
+<!-- SEO Visual 1: 당산 유흥 가이드 Editorial Apple Hero -->
+<div class="seo-visual-hero" role="img" aria-label="강서 유흥 정보 — 당산 당산 유흥 가이드" 
+     style="width:100%;padding:64px 24px;background:#faf9f6;border-bottom:1px solid #e5e5e0;text-align:left;margin:32px 0">
+  <div style="max-width:800px;margin:0 auto">
+    <div style="font-family:serif;font-size:0.9rem;text-transform:uppercase;letter-spacing:0.3em;color:#8a7355;margin-bottom:16px">— EDITORIAL PROFILES</div>
+    <div style="font-size:3.5em;line-height:1.1;font-weight:400;font-family:serif;color:#1c1c1e;letter-spacing:-0.03em;margin-bottom:16px">당산 유흥 가이드</div>
+    <p style="font-size:1.05rem;line-height:1.6;color:#1c1c1e;opacity:0.85;max-width:600px">당산를 중심으로 강서 유흥 정보에 관한 독립적이고 깊이 있는 정보를 제공합니다.</p>
   </div>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ImageObject","name":"당산 유흥 가이드","description":"강서 유흥 정보","contentUrl":"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22/>"}</script>
+</div>
+        <div class="hero-text">
+            <h1>당산,<br>진짜 밤이 시작되는 곳</h1>
+            <p>회식부터 혼술까지, 당산역에서 놀아본 사람들이 전하는 리얼 가이드. 분위기 좋은 술집, 숨은 핫플, 그리고 내돈내산 후기까지. 오늘 밤은 당산에서 즐겨보는 거 어때?</p>
+            <a href="tel:010-6279-0862" class="hero-phone">📞 010-6279-0862</a>
+            <p style="margin-top:12px; font-size:0.9rem; color:#777;">궁금한 건 언제든 전화 주세요!</p>
+        </div>
+        <div class="hero-visual">
+            🍻✨
+        </div>
+    </section>
+
+<!-- SEO Visual 2: 유흥 Cardless Editorial List -->
+<div class="seo-visual-cards" role="img" aria-label="당산 유흥 가이드 유흥 — 강서 유흥 정보" 
+     style="display:flex;flex-direction:column;gap:0;margin:40px 0;border-top:1px solid #e5e5e0;border-bottom:1px solid #e5e5e0;background:#faf9f6">
+  <div style="display:flex;align-items:center;justify-content:space-between;padding:24px 16px;border-bottom:1px solid #e5e5e0;background:transparent">
+    <div style="display:flex;align-items:center;gap:24px">
+      <span style="font-family:monospace;font-size:1rem;color:#8a7355;letter-spacing:0.05em;font-weight:500">[ 01 ]</span>
+      <span style="font-family:serif;font-weight:400;font-size:1.2rem;color:#1c1c1e;letter-spacing:-0.02em">특화</span>
+    </div>
+    <span style="font-family:sans-serif;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;color:#8a7355;font-weight:600">당산 유흥 가이드</span>
+  </div><div style="display:flex;align-items:center;justify-content:space-between;padding:24px 16px;border-bottom:1px solid #e5e5e0;background:transparent">
+    <div style="display:flex;align-items:center;gap:24px">
+      <span style="font-family:monospace;font-size:1rem;color:#8a7355;letter-spacing:0.05em;font-weight:500">[ 02 ]</span>
+      <span style="font-family:serif;font-weight:400;font-size:1.2rem;color:#1c1c1e;letter-spacing:-0.02em">다수 실적</span>
+    </div>
+    <span style="font-family:sans-serif;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;color:#8a7355;font-weight:600">당산 유흥 가이드</span>
+  </div><div style="display:flex;align-items:center;justify-content:space-between;padding:24px 16px;border-bottom:none;background:transparent">
+    <div style="display:flex;align-items:center;gap:24px">
+      <span style="font-family:monospace;font-size:1rem;color:#8a7355;letter-spacing:0.05em;font-weight:500">[ 03 ]</span>
+      <span style="font-family:serif;font-weight:400;font-size:1.2rem;color:#1c1c1e;letter-spacing:-0.02em">고품질</span>
+    </div>
+    <span style="font-family:sans-serif;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;color:#8a7355;font-weight:600">당산 유흥 가이드</span>
+  </div>
+</div>
+
+    <!-- INTRO -->
+    <section id="intro">
+        <h2>왜 당산일까?</h2>
+        <p>사실 나도 처음엔 몰랐어. 당산이 이렇게 핫한 동네인지. 지하철 2호선, 9호선 환승역이라 접근성도 좋고, 골목골목 숨은 술집들이 엄청 많거든. 게다가 유흥주점부터 조용한 와인바까지 취향별로 골라잡을 수 있어서, 모임 장소 정할 때도 딱이야.</p>
+        <p>이 사이트는 내가 직접 발로 뛰며 모은 정보와, 주변 친구들의 생생한 후기를 바탕으로 만들어졌어. 가격대, 분위기, 추천 메뉴까지 진짜 도움되는 내용만 담았으니 믿고 봐도 돼.</p>
+        <ul class="inline-list">
+            <li>역세권 1분 거리 핫플</li>
+            <li>가성비 좋은 회식 코스</li>
+            <li>데이트하기 좋은 분위기</li>
+            <li>혼술 가능한 바</li>
+        </ul>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- UGC REVIEWS -->
+    <section id="reviews">
+        <h2>🎤 솔직 후기 (UGC)</h2>
+        <div class="card-grid">
+            <div class="card">
+                <div class="stars">★★★★★</div>
+                <h3>와, 여기 꿀이야</h3>
+                <p>“당산역에서 회식했는데 분위기 미쳤어요. 안주도 푸짐하고, 사장님도 친절하시고. 다음에 또 올게요!”</p>
+                <div class="meta">
+                    <span>🐯 호랑이술사</span>
+                    <span>2025.02.14</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="stars">★★★★☆</div>
+                <h3>혼술하기 좋은 곳</h3>
+                <p>“혼자 갔는데도 전혀 어색하지 않았어. 바텐더가 말 걸어줘서 외롭지 않았음ㅋㅋ 칵테일 맛도 좋고!”</p>
+                <div class="meta">
+                    <span>🌙 달빛혼술</span>
+                    <span>2025.03.02</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="stars">★★★★★</div>
+                <h3>데이트 코스로 강추</h3>
+                <p>“여자친구랑 갔는데 인테리어가 너무 예뻐서 사진 찍기 좋았어요. 음식도 맛있고, 재방문 의사 200%”</p>
+                <div class="meta">
+                    <span>💑 커플모드</span>
+                    <span>2025.03.10</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="stars">★★★★☆</div>
+                <h3>가성비 갑</h3>
+                <p>“3차까지 갔는데 1인당 3만원도 안 나옴. 대박임. 홈술보다 싸게 먹었어요.”</p>
+                <div class="meta">
+                    <span>💰 알뜰파</span>
+                    <span>2025.03.22</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="stars">★★★★★</div>
+                <h3>처음 왔는데 반했어</h3>
+                <p>“당산에 이런 곳이 있는 줄 몰랐네요. 친구 따라서 왔는데 완전 만족. 앞으로 자주 올 듯”</p>
+                <div class="meta">
+                    <span>🍀 행운아</span>
+                    <span>2025.04.01</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- 추천 SPOTS -->
+    <section id="spots">
+        <h2>🍸 당산 추천 스팟 4</h2>
+        <div class="grid-2col">
+            <div class="card">
+                <h3>🥃 모던한 우즈</h3>
+                <p>위스키 바인데 입문자도 편하게 즐길 수 있어. 직원분이 추천해주는 위스키가 찰떡이야. 조용히 대화 나누기 좋은 공간.</p>
+                <div class="meta"><span>📍 당산역 3번출구 도보3분</span></div>
+            </div>
+            <div class="card">
+                <h3>🍻 포차골목 2층</h3>
+                <p>포차 분위기 그대로지만 실내라 사계절 쾌적. 매운 떡볶이와 튀김 세트는 국룰. 회식 단체로 오기 딱 좋아.</p>
+                <div class="meta"><span>📍 당산역 5번출구 도보5분</span></div>
+            </div>
+            <div class="card">
+                <h3>🍷 라운지 비</h3>
+                <p>와인바인데 가격이 합리적이야. 오픈런 안 해도 자리 있어. 샤르도네 한 잔 하면서 여유 즐기기 좋은 곳.</p>
+                <div class="meta"><span>📍 당산역 1번출구 도보2분</span></div>
+            </div>
+            <div class="card">
+                <h3>🍶 이자카야 나루</h3>
+                <p>일본 가정식 안주가 일품. 사케 종류도 다양해서 한잔 하기 좋아. 혼술족이 특히 많아서 부담 없어.</p>
+                <div class="meta"><span>📍 당산역 6번출구 도보4분</span></div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- CONTACT / 추가 정보 -->
+    <section id="contact">
+        <h2>📞 연락처 & 문의</h2>
+        <p>더 자세한 정보가 필요하거나, 단체 예약 문의는 전화나 문자 주세요. 친절하게 상담해드립니다.</p>
+        <p style="font-size:1.5rem; font-weight:600; margin: 16px 0;">
+            <a href="tel:010-6279-0862" style="border-bottom: 2px solid #e07a5f;">010-6279-0862</a>
+        </p>
+        <p>운영 시간: 매일 18:00 ~ 새벽 02:00 (주말은 04:00까지)</p>
+        <p style="margin-top: 16px;">
+            <a href="tel:010-6279-0862" class="btn">📞 지금 전화 걸기</a>
+        </p>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- 추가 정보 (SEO 롱테일) -->
+    <section>
+        <h2>당산 유흥, 이렇게 즐겨보세요</h2>
+        <p>처음 가는 사람도 당산에서 하루 종일 놀 수 있어. 점심에 당산 맛집에서 밥 먹고, 저녁에는 포차에서 소주, 늦은 밤에는 칵테일 바에서 마무리. 하루 코스로 딱이야. 우리 사이트에 소개된 곳들은 실제로 검증된 곳들이니 안심하고 방문해도 좋아.</p>
+        <p>혼자 와도, 여럿이 와도 당산은 널 환영해. 특히 <strong>당산 유흥 가이드</strong>에서 추천하는 장소는 분위기와 맛 모두 보장할게. 궁금한 점은 언제든 전화 주시고, 방문 전에 전화 한 통이면 더 편하게 즐길 수 있어!</p>
+    </section>
+
+</main>
+
+
+
+
+<!-- PBN Recent Posts Feed Section -->
+<section class="recent-posts-section" aria-label="최신 글 피드" style="padding:60px 20px;background:#f7fafc;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0">
+  <div style="max-width:1100px;margin:0 auto">
+    <h3 style="font-size:1.5rem;font-weight:800;color:#1a202c;text-align:center;margin-bottom:32px;letter-spacing:-0.025em">📝 최신 관련 포스트</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px">
+      
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-15">2026-06-15</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">룸비트 가격대별 원가 추리법, 형님이 알려주는 숨겨진 마진 공식</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">처음에 메뉴판 가격을 봤을 때 "이거 몇 시간 쓰나?" 하고 계산해봤다. 결과는 망했다. 왜냐면 원가는 아님에도 마치 원가처럼 계산하니까. 당산 쪽은 특히 인건비가 높아서 그보다 더 적게 나오기도 하고. ## 관찰 시각: 단골 손님의 눈높이 **Q:** 룸 단위 서비스</p>
+      </div>
+      <a href="posts/interview-002-xe2p22.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">시네필과 영화 예술 매니아들이 엄선 정리한 구글 상위노출 대행 상세 정보 리포트</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/juice-1.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">시네필과 영화 예술 매니아들이 엄선 정리한 구글 상위노출 대행 상세 정보 리포트</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/juice-2.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-15">2026-06-15</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">당산 밤거리에서 본 원가, 단골이 알려준 숨겨진 숫자</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">밤 1 시가 지나서야 비가 그친 당산 대로변. 손에 쥔 영수증 숫자만 세 번 더 훑어보던 건 나였다. 단골인 내가 아닌데도, 내게는 매일 밤 이 원가를 계산하는 일이다. 왜냐하면 손님들이 쓰는 돈이 사장님의 이익으로 가는 과정이 이따금씩은 투명한 게 아니기 때문이다. </p>
+      </div>
+      <a href="posts/myth-001-1ind998.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">안드레이 타르코프스키의 장시간 촬영(Long Take)과 조형적 침묵의 미학</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-1.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">고전 공포영화 음향 효과 속 숨겨진 악기: 워터폰(Waterphone)의 금속성 불협화음</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-2.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">스탠리 큐브릭 감독의 대칭 구도: 1점 투시 도식(One-Point Perspective)이 주는 심리적 압박</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-3.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    </div>
+  </div>
+
+<div class="seo-visual-divider" role="separator" aria-label="당산 유흥 가이드 구분선" style="margin:32px 0;text-align:center;color:#e5e5e0;font-size:0.85rem;letter-spacing:0.5em">◆ ◆ ◆</div>
+</section>
+<footer class="container">
+    <p>© 2025 당산 유흥 가이드 · <a href="tel:010-6279-0862">010-6279-0862</a> · 당산역 중심</p>
+    <p style="margin-top:8px; font-size:0.8rem;">모든 정보는 실제 방문 후기를 기반으로 합니다. 문의 사항은 전화 또는 문자로 부탁드려요.</p>
+</footer>
+
+<script>
+    // 햄버거 메뉴 토글
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+
+    hamburger.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+    });
+
+    // 메뉴 클릭 시 자동 닫기 (모바일)
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth <= 768) {
+                navLinks.classList.remove('active');
+            }
+        });
+    });
+</script>
+
+
+    <div class="juice-ref-vf39bm" style="margin-top:2.5rem;padding:1rem 0;border-top:1px dashed #ccc;font-size:0.9rem;color:#666;">
+      <p style="font-weight:600;margin-bottom:0.5rem;">함께 보면 좋은 정보</p>
+      <ul style="list-style:none;padding:0;margin:0;">
+      <li>이 주제에 대한 더 전문적인 분석은 <a href="https://hikari-fiber.store/">tokyo-fiber</a>에서 확인하실 수 있습니다.</li>
+      <li>심층 정보와 실제 데이터는 <a href="https://aga-clinic.space/">tokyo-aga</a>를 참고하세요.</li>
+      <li>자세한 기술 명세 가이드는 <a href="https://ko.wikipedia.org/" rel="noopener noreferrer" target="_blank">공식 가이드 커뮤니티</a>를 참고하십시오.</li>
+      </ul>
+    </div>
+
+<!-- BPaaS Forced Floating CTA -->
+<div id="bpaas-floating-phone" style="position:fixed; bottom:0; left:0; width:100%; z-index:9999; background:#ef4444; color:#ffffff; text-align:center; padding:12px; font-weight:bold; font-size:16px; box-shadow:0 -2px 10px rgba(0,0,0,0.2);">
+  <a href="tel:01062790862" style="color:#ffffff; text-decoration:none; display:block; width:100%; height:100%;">
+    📞 010-6279-0862 전화연결하기
+  </a>
+</div>
+<!-- End BPaaS Forced Floating CTA -->
+
 </body>
 </html>
