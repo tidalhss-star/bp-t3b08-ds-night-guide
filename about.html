@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>당산 유흥 가이드 | 정보</title>
+    <meta name="description" content="당산역 주변 유흥 정보를 친근하게 소개합니다. 혼술, 회식, 데이트까지 아우르는 당산 유흥 가이드. 전화 문의 010-6279-0862">
+    <meta name="keywords" content="당산, 유흥, 당산 유흥 가이드, 당산 술집, 당산 놀거리, 당산 회식, 당산 혼술, 당산역 맛집">
+    <meta name="bpaas-design-system" content="editorial-apple">
+    <meta name="bpaas-design-theme" content="kr-warm-grid">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://t3b08-ds-night-guide.vercel.app/">
+    <!-- OG 메타 -->
+    <meta property="og:title" content="당산 유흥 가이드 | 현지인이 추천하는 밤의 핫플">
+    <meta property="og:description" content="당산역에서 즐기는 진짜 유흥 정보. 혼술, 회식, 데이트까지 커버하는 당산 유흥 가이드">
+    <style>
+        /* RESET & BASE */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: #faf8f5;
+            color: #1d1c1a;
+            line-height: 1.6;
+        }
+        /* CONTAINER */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* TYPOGRAPHY */
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 0.8rem;
+        }
+        h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+        p {
+            margin-bottom: 1rem;
+        }
+        a {
+            color: #c73e3e;
+            text-decoration: none;
+            transition: opacity 0.2s ease;
+        }
+        a:hover {
+            opacity: 0.7;
+        }
+        /* HEADER / NAV */
+        header {
+            background: #fff;
+            border-bottom: 1px solid #e8e4df;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #1d1c1a;
+            letter-spacing: -0.03em;
+        }
+        .logo:hover {
+            opacity: 0.8;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        .nav-links a {
+            font-weight: 500;
+            font-size: 0.95rem;
+            color: #1d1c1a;
+        }
+        .nav-links a:hover {
+            color: #c73e3e;
+        }
+        /* HAMBURGER MENU */
+        .hamburger-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+        .hamburger-menu span {
+            width: 25px;
+            height: 3px;
+            background: #1d1c1a;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+        /* RESPONSIVE 768 */
+        @media (max-width: 768px) {
+            .hamburger-menu {
+                display: flex;
+            }
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #fff;
+                flex-direction: column;
+                padding: 1rem 20px;
+                gap: 1rem;
+                border-bottom: 1px solid #e8e4df;
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.4rem;
+            }
+        }
+        /* TEL LINK */
+        .tel-link {
+            display: inline-block;
+            background: #c73e3e;
+            color: #fff;
+            padding: 0.5rem 1.2rem;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: background 0.3s ease;
+        }
+        .tel-link:hover {
+            background: #a83232;
+            opacity: 1;
+        }
+        /* MAIN CONTENT */
+        .page-section {
+            padding: 3rem 0;
+        }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            border: 1px solid #e8e4df;
+        }
+        .info-list {
+            list-style: none;
+        }
+        .info-list li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #f0ece7;
+            display: flex;
+            gap: 0.5rem;
+        }
+        .info-list li:last-child {
+            border-bottom: none;
+        }
+        .badge {
+            display: inline-block;
+            background: #f0ece7;
+            color: #1d1c1a;
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        .faq-item {
+            margin-bottom: 1.5rem;
+        }
+        .faq-item h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+            color: #c73e3e;
+        }
+        footer {
+            background: #1d1c1a;
+            color: #faf8f5;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        footer a {
+            color: #f0ece7;
+        }
+        @media (max-width: 768px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="/" class="logo">🍻 당산 유흥 가이드</a>
+            <div class="hamburger-menu" onclick="this.classList.toggle('active'); document.querySelector('.nav-links').classList.toggle('active')">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">홈</a></li>
+                <li><a href="/info.html">정보</a></li>
+                <li><a href="/hotplaces.html">핫플</a></li>
+                <li><a href="/review.html">리뷰</a></li>
+                <li><a href="tel:010-6279-0862" class="tel-link">전화 문의</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="container page-section">
+        <h1>당산 유흥 완전 정복 정보</h1>
+        <p style="font-size: 1.2rem; color: #555;">형, 당산에서 제대로 놀고 싶다면? 여기 다 있다니까? 😎</p>
+
+        <div class="grid-2" style="margin-top: 2rem;">
+            <div class="card">
+                <h3>📍 당산 유흥 존</h3>
+                <ul class="info-list">
+                    <li><span class="badge">🔥 핫존</span> 당산역 1번 출구 주변 골목</li>
+                    <li><span class="badge">🍺 혼술</span> 역전할머니맥주, 골목포차</li>
+                    <li><span class="badge">👥 회식</span> 당산 고기집, 화로구이 골목</li>
+                    <li><span class="badge">💑 데이트</span> 와인바 / 칵테일바 3곳</li>
+                    <li><span class="badge">🌙 늦은밤</span> 당산 노래방 / 포차 24시</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>⏰ 운영 시간 팁</h3>
+                <ul class="info-list">
+                    <li>월~목: 17:00 ~ 01:00 (조용한 편)</li>
+                    <li>금~토: 16:00 ~ 새벽 3시 (완전 북적)</li>
+                    <li>일요일: 대부분 쉬거나 일찍 문 닫음</li>
+                    <li>연말연시: 미리 전화 필수! 010-6279-0862</li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="margin-top: 3rem;">
+            <h2>🍖 당산에서 꼭 가봐야 할 3곳</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>1. 당산막걸리집</h3>
+                    <p>형, 여기 막걸리가 미쳤어. 누룩 향이 진짜 끝내줘. 안주는 김치전이랑 파전인데 바삭함이 장난 아님. 가격도 착해서 부담 없어.</p>
+                    <p><strong>추천:</strong> 생막걸리 + 해물파전</p>
+                </div>
+                <div class="card">
+                    <h3>2. 역전포차</h3>
+                    <p>당산역 바로 앞에 있는 포차야. 혼술하기 딱 좋아. 사장님이 친근하게 말 걸어주셔서 외로운 밤에도 괜찮아. 소주 한 잔에 오뎅탕? 완전 럭키비키잖아.</p>
+                    <p><strong>추천:</strong> 소주 + 오뎅탕 + 떡튀김</p>
+                </div>
+                <div class="card">
+                    <h3>3. 당산 와인창고</h3>
+                    <p>데이트 장소로 진짜 좋아. 분위기가 감성적이야. 와인 종류도 많고 가격도 합리적. 연인끼리 오면 분위기 메이커 역할 톡톡히 함.</p>
+                    <p><strong>추천:</strong> 레드와인 + 치즈 플래터</p>
+                </div>
+                <div class="card">
+                    <h3>4. 골목화로구이</h3>
+                    <p>회식 장소로 최고야. 고기가 실하고 술이 술술 들어가. 직장 동료들이랑 오면 대화가 끊이질 않아. 예약은 필수! 전화 010-6279-0862</p>
+                    <p><strong>추천:</strong> 삼겹살 + 소주 + 된장찌개</p>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-top: 3rem;">
+            <h2>❓ 당산 유흥 FAQ</h2>
+            <div class="faq-item">
+                <h4>Q. 당산에서 혼술하기 좋은 곳은?</h4>
+                <p>A. 역전포차나 당산막걸리집 추천! 혼자 와도 전혀 어색하지 않고 사장님이 친절하게 대해줘. 혼술러들 많아서 부담 없어.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Q. 회식 장소 추천해줘!</h4>
+                <p>A. 골목화로구이 완전 강추! 단체석도 있고 고기 퀄리티가 좋아. 예약 필수니까 전화 미리 해야 해. 010-6279-0862로 연락하면 친절하게 안내해줘.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Q. 데이트 코스로 괜찮은 곳?</h4>
+                <p>A. 당산 와인창고에서 와인 한 잔 하고, 근처 카페에서 디저트 먹으면 딱이야. 분위기도 좋고 사진 찍기 좋은 곳이라 여자친구가 좋아할 거야.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Q. 늦은 밤에 갈 만한 곳?</h4>
+                <p>A. 당산 노래방이나 24시 포차 있어. 늦은 시간에도 사람 많아서 안전하고 재밌어. 단, 일요일은 일찍 문 닫으니까 참고!</p>
+            </div>
+            <div class="faq-item">
+                <h4>Q. 주차는 어디에?</h4>
+                <p>A. 당산역 공영주차장 이용하면 돼. 주말에는 자리 없을 수 있으니 대중교통 추천! 역에서 5분 거리라 걸어 다니기 편해.</p>
+            </div>
+        </div>
+
+        <div style="margin-top: 3rem; text-align: center; padding: 2rem; background: #fff; border-radius: 12px; border: 1px solid #e8e4df;">
+            <h3>📞 지금 전화하면 더 자세한 정보 알려줘!</h3>
+            <p style="font-size: 1.1rem;">당산 유흥에 대해 궁금한 거 있으면 언제든지 전화해. 형이 다 알려줄게!</p>
+            <a href="tel:010-6279-0862" class="tel-link" style="font-size: 1.2rem; padding: 0.8rem 2rem;">010-6279-0862</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>🍻 당산 유흥 가이드 | 현지인이 전하는 진짜 정보</p>
+            <p>문의: <a href="tel:010-6279-0862">010-6279-0862</a></p>
+            <p style="font-size: 0.8rem; margin-top: 1rem;">© 2025 당산 유흥 가이드. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // 햄버거 메뉴 토글
+        document.querySelector('.hamburger-menu').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
